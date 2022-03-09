@@ -1,3 +1,5 @@
+package de.aeo.memeory;
+
 public class Spieler
 {
   private int paare;
@@ -18,7 +20,7 @@ public class Spieler
   public int zaehleZuege()
   {
     for (Spielmechanik.spielZug() ) 
-    {    //funktioniert das so überhaupt?
+    {    //funktioniert das so ï¿½berhaupt?
       this.zuege ++;
     }
     }

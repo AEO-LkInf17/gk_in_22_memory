@@ -1,3 +1,5 @@
+package de.aeo.memeory.random;
+
 import java.util.Random;
 public class RNG {
   public static int randomNumberGenerator(int min, int max) {

@@ -1,9 +1,11 @@
+package de.aeo.memeory;
+
 import java.awt.*;
 import javax.swing.*;
 public class Image extends JFrame
 {
   private ImageIcon bild;
-  private JLaben anzeige;
+  private JLabel anzeige;
   
   public Image ()
   {

@@ -1,13 +1,19 @@
+package de.aeo.memeory;
+
+import de.aeo.memeory.position.Position;
 import java.util.ArrayList;
-public class MrMemeory
-{
-  public void starteSpiel()
+
+public class MrMemeory {
+
+    /*public void starteSpiel()
   {
     
   }
   public Spielbrett waehleSpielgroesse(Spielbrett sb) //waehlt Spielbrett
   {
-    //übernimmt Layout eines Spielbretts
+    //uebernimmt Layout eines Spielbretts
+      return null;
+    //uebernimmt Layout eines Spielbretts
   }
   public void spielLaden() //oeffnet zuletzt gespeichertes Spiel
   {
@@ -45,7 +51,7 @@ public class MrMemeory
   {
     
   }
-  public boolean hellDunkel() //meint Light- bzw. Darkmode
+  public void hellDunkel() //meint Light- bzw. Darkmode
   {
     
   }
@@ -56,5 +62,17 @@ public class MrMemeory
   public void oeffnePause()
   {
     
-  }
+  }*/
+    public static void main(String[] args) {
+        Spielbrett s1 = new Spielbrett(5);
+        s1.setPositionsbezeichnung();
+
+        Karte k1 = new Karte(":P", 1, s1, 2, false);
+        k1.setPosition(s1);
+        System.out.println(k1);
+
+        Karte k2 = new Karte(":P", 1, s1, 2, false);
+        k2.setPosition(s1);
+        System.out.println(k2);
+    }
 }

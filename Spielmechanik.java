@@ -1,3 +1,5 @@
+package de.aeo.memeory;
+
 import java.util.ArrayList;
 public class Spielmechanik
 {
@@ -19,7 +21,7 @@ public class Spielmechanik
     }
   public void spielAnfang()
   {
-    //brauchen wir diese Methode überhaupt?
+    //brauchen wir diese Methode ï¿½berhaupt?
     }
   public void spielZug()
   {
