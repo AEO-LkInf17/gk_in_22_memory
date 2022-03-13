@@ -6,13 +6,25 @@ import java.util.Arrays;
 public class Spielbrett {
 
     private int hintergrund;
-    public int positionsbezeichnung;
+    public int[][] positionsbezeichnung;
+    private Karte[][] karten;
+    private Spielmechanik spielmechanik;
 
-    public Spielbrett(int hintergrund) {
-        this.hintergrund = 0;
-        this.positionsbezeichnung = 0;
+    public Spielbrett(int hintergrund,Spielmechanik s,int breite,int hoehe) {
+        this.hintergrund = hintergrund;
+        this.positionsbezeichnung = null;
+        this.karten = new Karte[breite][hoehe];
+        this.spielmechanik = s;
     }
 
+    public void legeKartehin(Karte k,int x,int y){
+        karten[x][y]=k;
+    }
+    
+    public String wasliegtaufxy(int x,int y){
+        return karten[x][y].toString();
+    }
+    
     public int setHintergrund(byte neuerHintergrund) {
         return this.hintergrund = neuerHintergrund;
     }
@@ -21,7 +33,7 @@ public class Spielbrett {
         return this.positionsbezeichnung + "";
     }
 
-    public void setPositionsbezeichnung() {
+    public void setPositionsbezeichnung() { // Macht Array und vergisst ihn gleich wieder.
         int e = 0;
         int[][] position = new int[4][5];
         for (int i = 0; i < 4; i++) {
@@ -37,8 +49,9 @@ public class Spielbrett {
             System.out.println();
         }
     }
-
+    /*
     public int getPositionsbezeichnung() {
         return this.positionsbezeichnung;
     }
+    **/
 }

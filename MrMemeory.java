@@ -64,6 +64,7 @@ public class MrMemeory {
     
   }*/
     public static void main(String[] args) {
+        /*
         Spielbrett s1 = new Spielbrett(5);
         s1.setPositionsbezeichnung();
 
@@ -74,5 +75,24 @@ public class MrMemeory {
         Karte k2 = new Karte(":P", 1, s1, 2, false);
         k2.setPosition(s1);
         System.out.println(k2);
+        **/
+        
+        Spielmechanik sp = new Spielmechanik();
+        Spielbrett s = new Spielbrett(0,sp,5,4);
+        Karte k0 = new Karte(0);
+        s.legeKartehin(k0, 0, 0);
+        Karte k1 = new Karte(0);
+        s.legeKartehin(k1, 1, 0);
+        System.out.println(""+sp.vergleich(k0, k1));
+        System.out.println(s.wasliegtaufxy(0, 0));
+        
+
+        /*
+        System.out.println("Hallo Welt!");
+        int[][] zahlen = new int[3][3];
+        zahlen[0][0]=1;
+        System.out.println(zahlen[1][1]);
+        System.out.println(zahlen[0][0]);
+        **/
     }
 }
