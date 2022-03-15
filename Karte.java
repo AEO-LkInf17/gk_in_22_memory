@@ -7,14 +7,6 @@ public class Karte {
     private Spielbrett position; //2D-ArrayList
     private int seitenlaenge; //variiert je nach Spielbrett
     private boolean paarGefunden;
-
-    public Karte(String kartenruecken, int motivnr, Spielbrett positionsbezeichnung, int seitenlaenge, boolean paarGefunden) {
-        this.kartenruecken = null;
-        this.motivnr = motivnr;
-        this.position = null; //zufaellig zugeteilt
-        this.seitenlaenge = seitenlaenge;
-        this.paarGefunden = false;
-    }
     
     public Karte(int motivnr){
         this.kartenruecken = null;

@@ -2,6 +2,8 @@ package de.aeo.memeory;
 
 import de.aeo.memeory.position.Position;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MrMemeory {
 
@@ -76,16 +78,19 @@ public class MrMemeory {
         k2.setPosition(s1);
         System.out.println(k2);
         **/
+        Spieler sp = new Spieler();
         
-        Spielmechanik sp = new Spielmechanik();
-        Spielbrett s = new Spielbrett(0,sp,5,4);
+        Spielmechanik sm = new Spielmechanik(sp);
+        Spielbrett s = new Spielbrett(0,sm,5,4);
         Karte k0 = new Karte(0);
         s.legeKartehin(k0, 0, 0);
         Karte k1 = new Karte(0);
         s.legeKartehin(k1, 1, 0);
-        System.out.println(""+sp.vergleich(k0, k1));
+        System.out.println(""+sm.vergleich(k0, k1));
         System.out.println(s.wasliegtaufxy(0, 0));
         
+        sp.setPaare();
+        System.out.println(sp);
 
         /*
         System.out.println("Hallo Welt!");

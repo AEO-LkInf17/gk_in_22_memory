@@ -1,27 +1,30 @@
 package de.aeo.memeory;
 
-public class Spieler
-{
-  private int paare;
-  private int zuege;
-  
-  public Spieler (int paare, int zuege)
-  {
-    this.paare = 0;
-    this.zuege = 0;
+public class Spieler {
+
+    public int paare;
+    public int zuege;
+
+    public Spieler() {
+        this.paare = 0;
+        this.zuege = 0;
     }
-  public int zaehlePaare()
-  {
-    if (Spielmechanik.vergleich() = true)
-    {
-      this.paare ++;
-     }
+
+    public void setPaare() {
+        this.paare++;
     }
-  public int zaehleZuege()
+
+    /*public int zaehleZuege()
   {
     for (Spielmechanik.spielZug() ) 
     {    //funktioniert das so �berhaupt?
       this.zuege ++;
     }
+    }*/
+
+    @Override
+    public String toString() {
+        return "Spieler{" + "paare=" + paare + ", zuege=" + zuege + '}';
     }
-  }
+    
+}
