@@ -66,38 +66,22 @@ public class MrMemeory {
     
   }*/
     public static void main(String[] args) {
-        /*
-        Spielbrett s1 = new Spielbrett(5);
-        s1.setPositionsbezeichnung();
 
-        Karte k1 = new Karte(":P", 1, s1, 2, false);
-        k1.setPosition(s1);
-        System.out.println(k1);
-
-        Karte k2 = new Karte(":P", 1, s1, 2, false);
-        k2.setPosition(s1);
-        System.out.println(k2);
-        **/
         Spieler sp = new Spieler();
-        
         Spielmechanik sm = new Spielmechanik(sp);
-        Spielbrett s = new Spielbrett(0,sm,5,4);
+        Spielbrett s = new Spielbrett(0, sm, 5, 4);
         Karte k0 = new Karte(0);
-        s.legeKartehin(k0, 0, 0);
         Karte k1 = new Karte(0);
-        s.legeKartehin(k1, 1, 0);
-        System.out.println(""+sm.vergleich(k0, k1));
-        System.out.println(s.wasliegtaufxy(0, 0));
         
-        sp.setPaare();
-        System.out.println(sp);
+        s.setPositionsbezeichnung(); //wirft Gitter aus
+        s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4));
+        s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
+        //System.out.println("" + sm.vergleich(k0, k1)); //vergleicht Karten
+        //System.out.println(s.wasliegtaufxy(0, 0)); //checkt, welche Karte auf dieser Position liegt
 
-        /*
-        System.out.println("Hallo Welt!");
-        int[][] zahlen = new int[3][3];
-        zahlen[0][0]=1;
-        System.out.println(zahlen[1][1]);
-        System.out.println(zahlen[0][0]);
-        **/
+        //System.out.println(sp);
+        //s.setZufallx(0, 5);
+        //s.setZufally(0, 4);
+
     }
 }

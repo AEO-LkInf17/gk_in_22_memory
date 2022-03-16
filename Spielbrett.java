@@ -2,56 +2,65 @@ package de.aeo.memeory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Spielbrett {
 
     private int hintergrund;
-    public int[][] positionsbezeichnung;
-    private Karte[][] karten;
+    private int[][] positionsbezeichnung;
+    public Karte[][] position; //Arraylist für Objekte um Ueberschreibung zu verhindern
     private Spielmechanik spielmechanik;
 
-    public Spielbrett(int hintergrund,Spielmechanik s,int breite,int hoehe) {
+    public Spielbrett(int hintergrund, Spielmechanik s, int breite, int hoehe) {
         this.hintergrund = hintergrund;
-        this.positionsbezeichnung = null;
-        this.karten = new Karte[breite][hoehe];
+        this.positionsbezeichnung = positionsbezeichnung;
+        this.position = new Karte[breite][hoehe];
         this.spielmechanik = s;
     }
 
-    public void legeKartehin(Karte k,int x,int y){
-        karten[x][y]=k;
+    public int setZufallx(int min, int max) {
+        Random randX = new Random();
+        int randomNum = randX.nextInt(max - min);
+        int x = randomNum;
+        //System.out.println("" + x);
+        return x;
     }
-    
-    public String wasliegtaufxy(int x,int y){
-        return karten[x][y].toString();
+
+    public int setZufally(int min, int max) {
+        Random randY = new Random();
+        int randomNum = randY.nextInt(max - min);
+        int y = randomNum;
+        //System.out.println("" + y);
+        return y;
     }
-    
+
+    public Karte legeKartehin(Karte k, int x, int y) {
+        //position[x][y] = k;
+        System.out.println(position + "");
+        return position[x][y] = k;
+    }
+
+    public String wasliegtaufxy(int x, int y) {
+        return position[x][y] + "";
+    }
+
     public int setHintergrund(byte neuerHintergrund) {
         return this.hintergrund = neuerHintergrund;
+
     }
 
-    public String toString() {
-        return this.positionsbezeichnung + "";
-    }
-
-    public void setPositionsbezeichnung() { // Macht Array und vergisst ihn gleich wieder.
-        int e = 0;
+    public int[][] setPositionsbezeichnung() { // erstellt 
         int[][] position = new int[4][5];
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                position[i][j] = e;
-                e++;
             }
         }
-        for (int i = 0; i < position.length; i++) {
+        for (int i = 0; i < position.length; i++) {  //printet das Spielbrett
             for (int j = 0; j < position[i].length; j++) {
                 System.out.print(position[i][j] + " ");
             }
             System.out.println();
         }
+        return positionsbezeichnung;
     }
-    /*
-    public int getPositionsbezeichnung() {
-        return this.positionsbezeichnung;
-    }
-    **/
 }

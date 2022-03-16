@@ -11,7 +11,7 @@ public class Karte {
     public Karte(int motivnr){
         this.kartenruecken = null;
         this.motivnr = motivnr;
-        this.position = null; //zufaellig zugeteilt
+        this.position = position; //zufaellig zugeteilt
         this.seitenlaenge = 1;
         this.paarGefunden = false;
     }
@@ -20,8 +20,8 @@ public class Karte {
         this.seitenlaenge = neueSeitenlaenge;
     }
 
-    public void setPosition(Spielbrett positionsbezeichnung) {
-        this.position = positionsbezeichnung;
+    public void setPosition(Spielbrett position) {
+        this.position = position;
     }
 
     public String toString() {
