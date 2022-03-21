@@ -4,14 +4,18 @@ public class Karte {
 
     private String kartenruecken;
     private int motivnr;
-    private Spielbrett position; //2D-ArrayList
+    private Spielbrett position;
+    private int positionX;
+    private int positionY;
     private int seitenlaenge; //variiert je nach Spielbrett
     private boolean paarGefunden;
     
     public Karte(int motivnr){
         this.kartenruecken = null;
         this.motivnr = motivnr;
-        this.position = position; //zufaellig zugeteilt
+        this.position = position;
+        this.positionX = positionX;
+        this.positionY = positionY;
         this.seitenlaenge = 1;
         this.paarGefunden = false;
     }
@@ -34,6 +38,14 @@ public class Karte {
 
     public void setPaarGefunden(boolean paarGefunden) {
         this.paarGefunden = paarGefunden;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
     }
     
     

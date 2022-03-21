@@ -9,6 +9,7 @@ public class Spielbrett {
     private int hintergrund;
     private int[][] positionsbezeichnung;
     public Karte[][] position; //Arraylist für Objekte um Ueberschreibung zu verhindern
+    public ArrayList<Karte> alleKarten = new ArrayList<>();//speichert alle Positionsinformationen aller Karten
     private Spielmechanik spielmechanik;
 
     public Spielbrett(int hintergrund, Spielmechanik s, int breite, int hoehe) {
@@ -37,6 +38,9 @@ public class Spielbrett {
     public Karte legeKartehin(Karte k, int x, int y) {
         //position[x][y] = k;
         System.out.println(position + "");
+        alleKarten.add(k);
+        k.setPositionX(x);
+        k.setPositionY(y);
         return position[x][y] = k;
     }
 
