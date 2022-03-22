@@ -9,6 +9,7 @@ public class Karte {
     private int positionY;
     private int seitenlaenge; //variiert je nach Spielbrett
     private boolean paarGefunden;
+    private boolean umgedreht;
     
     public Karte(int motivnr){
         this.kartenruecken = null;
@@ -47,6 +48,10 @@ public class Karte {
     public void setPositionY(int positionY) {
         this.positionY = positionY;
     }
-    
-    
+    public void setUmgedreht(boolean umgedreht) {
+        this.umgedreht = umgedreht;
+    }
+    public boolean getUmgedreht() {
+        return umgedreht;
+    } 
 }

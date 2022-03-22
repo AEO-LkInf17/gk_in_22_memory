@@ -3,22 +3,39 @@ package de.aeo.memeory;
 import java.util.ArrayList;
 
 public class Spielmechanik {
-    
+
     private Spieler spieler;
-    
-    public Spielmechanik(Spieler spieler){
+    private Karte a;
+    private Karte b;
+
+    public Spielmechanik(Spieler spieler) {
         this.spieler = spieler;
     }
 
-    public boolean vergleich(Karte k,Karte l) {
-        if (k.getMotivnr() == l.getMotivnr()) {
-            k.setPaarGefunden(true);
-            l.setPaarGefunden(true);
+    public boolean vergleich(Karte a, Karte b) {
+        if (a.getMotivnr() == b.getMotivnr()) {
+            a.setPaarGefunden(true);
+            b.setPaarGefunden(true);
             spieler.setPaare();
+            System.out.println("Paar");
             return true; //aufgedeckt lassen
         } else {
+            a.setUmgedreht(false);
+            b.setUmgedreht(false);
+            System.out.println("kein Paar");
             return false; // umdrehen
         }
+    }
+
+    public boolean umdrehen1(Karte k) {
+        k.setUmgedreht(true);
+        k = a;
+        return true;
+    }
+    public boolean umdrehen2(Karte k) {
+        k.setUmgedreht(true);
+        k = b;
+        return true;
     }
 
     /*
@@ -28,7 +45,6 @@ public class Spielmechanik {
         }
     }
     **/
-
     public void spielAnfang() {
         //brauchen wir diese Methode �berhaupt?
     }
