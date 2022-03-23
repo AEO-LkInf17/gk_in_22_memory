@@ -18,8 +18,6 @@ public class Spieler {
         this.zuege ++;
     }
 
-    
-
     @Override
     public String toString() {
         return "Spieler{" + "paare=" + paare + ", zuege=" + zuege + '}';

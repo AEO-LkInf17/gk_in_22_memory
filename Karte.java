@@ -31,7 +31,7 @@ public class Karte {
     }
 
     public String toString() {
-        return "" + position + motivnr;
+        return positionX + " " + positionY + " " + motivnr;
     }
 
     public int getMotivnr() {

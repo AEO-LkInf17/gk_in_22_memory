@@ -23,7 +23,7 @@ public class Spielbrett {
         Random randX = new Random();
         int randomNum = randX.nextInt(max - min);
         int x = randomNum;
-        //System.out.println("" + x);
+        //System.out.println("" + x); //Test
         return x;
     }
 
@@ -31,12 +31,11 @@ public class Spielbrett {
         Random randY = new Random();
         int randomNum = randY.nextInt(max - min);
         int y = randomNum;
-        //System.out.println("" + y);
+        //System.out.println("" + y); //Test
         return y;
     }
 
     public Karte legeKartehin(Karte k, int x, int y) {
-        //position[x][y] = k;
         System.out.println(position + "");
         alleKarten.add(k);
         k.setPositionX(x);
@@ -53,7 +52,7 @@ public class Spielbrett {
 
     }
 
-    public int[][] setPositionsbezeichnung() { // erstellt 
+    public int[][] setPositionsbezeichnung() { // erstellt Gitter
         int[][] position = new int[4][5];
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {

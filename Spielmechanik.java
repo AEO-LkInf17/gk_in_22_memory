@@ -5,41 +5,39 @@ import java.util.ArrayList;
 public class Spielmechanik {
 
     private Spieler spieler;
-    private Karte a;
-    private Karte b;
 
     public Spielmechanik(Spieler spieler) {
         this.spieler = spieler;
-        this.a = a;
-        this.b = b;
     }
 
-    public boolean vergleich(Karte a, Karte b) {
-        if (a.getMotivnr() == b.getMotivnr()) {
-            a.setPaarGefunden(true);
-            b.setPaarGefunden(true);
-            spieler.setPaare();
-            spieler.setZuege();
-            System.out.println("Paar");
-            return true; //aufgedeckt lassen
+    public boolean umdrehen(Karte k, Karte l) {
+        k.setUmgedreht(true);
+        l.setUmgedreht(true);
+        vergleich(k, l);
+        return true;
+    }
+
+    public boolean vergleich(Karte k, Karte l) {
+        if (k.getUmgedreht() == true & l.getUmgedreht() == true) {
+            if (k.getMotivnr() == l.getMotivnr()) {
+                k.setPaarGefunden(true);
+                l.setPaarGefunden(true);
+                spieler.setPaare();
+                spieler.setZuege();
+                System.out.println("Paar + Zug");
+                return true; //aufgedeckt lassen
+            } else {
+                k.setUmgedreht(false);
+                l.setUmgedreht(false);
+                spieler.setZuege();
+                System.out.println("kein Paar + Zug");
+                return false; // umdrehen
+            }
         } else {
-            a.setUmgedreht(false);
-            b.setUmgedreht(false);
-            spieler.setZuege();
-            System.out.println("kein Paar");
-            return false; // umdrehen
+            System.out.println("Vergleich nicht moeglich");
+            return false;
         }
-    }
 
-    public boolean umdrehen1(Karte k) {
-        k.setUmgedreht(true);
-        k = a;
-        return true;
-    }
-    public boolean umdrehen2(Karte k) {
-        k.setUmgedreht(true);
-        k = b;
-        return true;
     }
 
     /*
@@ -49,11 +47,4 @@ public class Spielmechanik {
         }
     }
     **/
-    public void spielAnfang() {
-        //brauchen wir diese Methode �berhaupt?
-    }
-
-    public void spielZug() {
-        //drehe zwei Karten um
-    }
 }
