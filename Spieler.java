@@ -14,13 +14,11 @@ public class Spieler {
         this.paare++;
     }
 
-    /*public int zaehleZuege()
-  {
-    for (Spielmechanik.spielZug() ) 
-    {    //funktioniert das so �berhaupt?
-      this.zuege ++;
+    public void setZuege() {
+        this.zuege ++;
     }
-    }*/
+
+    
 
     @Override
     public String toString() {

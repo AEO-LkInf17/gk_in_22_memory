@@ -10,6 +10,8 @@ public class Spielmechanik {
 
     public Spielmechanik(Spieler spieler) {
         this.spieler = spieler;
+        this.a = a;
+        this.b = b;
     }
 
     public boolean vergleich(Karte a, Karte b) {
@@ -17,11 +19,13 @@ public class Spielmechanik {
             a.setPaarGefunden(true);
             b.setPaarGefunden(true);
             spieler.setPaare();
+            spieler.setZuege();
             System.out.println("Paar");
             return true; //aufgedeckt lassen
         } else {
             a.setUmgedreht(false);
             b.setUmgedreht(false);
+            spieler.setZuege();
             System.out.println("kein Paar");
             return false; // umdrehen
         }

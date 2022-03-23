@@ -19,6 +19,7 @@ public class Karte {
         this.positionY = positionY;
         this.seitenlaenge = 1;
         this.paarGefunden = false;
+        this.umgedreht = false;
     }
 
     public void setSeitenlaenge(int neueSeitenlaenge) {
