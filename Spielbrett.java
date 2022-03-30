@@ -6,20 +6,28 @@ import java.util.Random;
 
 public class Spielbrett {
 
-    private int hintergrund;
-    private int[][] positionsbezeichnung;
+    private int hintergrund; //sollte eig ein bild sein
+    private int[][] positionsbezeichnung; //gitter
     public Karte[][] position; //Arraylist für Objekte um Ueberschreibung zu verhindern
     public ArrayList<Karte> alleKarten = new ArrayList<>();//speichert alle Positionsinformationen aller Karten
-    private Spielmechanik spielmechanik;
+    private Spielmechanik spielmechanik; 
+    private int breite; //breite des gitters
+    private int hoehe; //hoehe des spielbretts
 
-    public Spielbrett(int hintergrund, Spielmechanik s, int breite, int hoehe) {
+    public Spielbrett(int hintergrund, int breite, int hoehe) {
         this.hintergrund = hintergrund;
         this.positionsbezeichnung = positionsbezeichnung;
         this.position = new Karte[breite][hoehe];
-        this.spielmechanik = s;
+        this.spielmechanik = spielmechanik;
+        this.breite = breite;
+        this.hoehe = hoehe;
     }
 
-    public int setZufallx(int min, int max) {
+    public Spielmechanik setSpielmechanik(Spielmechanik spielmechanik) {
+        return spielmechanik;
+    }
+
+    public int setZufallx(int min, int max) { //x=breite
         Random randX = new Random();
         int randomNum = randX.nextInt(max - min);
         int x = randomNum;
@@ -27,7 +35,7 @@ public class Spielbrett {
         return x;
     }
 
-    public int setZufally(int min, int max) {
+    public int setZufally(int min, int max) { //y=hoehe
         Random randY = new Random();
         int randomNum = randY.nextInt(max - min);
         int y = randomNum;
@@ -43,7 +51,7 @@ public class Spielbrett {
         return position[x][y] = k;
     }
 
-    public String wasliegtaufxy(int x, int y) {
+    public String wasliegtaufxy(int x, int y) { //test-methode
         return position[x][y] + "";
     }
 
@@ -53,9 +61,9 @@ public class Spielbrett {
     }
 
     public int[][] setPositionsbezeichnung() { // erstellt Gitter
-        int[][] position = new int[4][5];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 5; j++) {
+        int[][] position = new int[breite][hoehe];
+        for (int i = 0; i < breite; i++) {
+            for (int j = 0; j < hoehe; j++) {
             }
         }
         for (int i = 0; i < position.length; i++) {  //printet das Spielbrett
@@ -66,4 +74,13 @@ public class Spielbrett {
         }
         return positionsbezeichnung;
     }
+
+    public int getBreite() {
+        return breite;
+    }
+
+    public int getHoehe() {
+        return hoehe;
+    }
+
 }

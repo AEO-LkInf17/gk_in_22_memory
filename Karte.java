@@ -6,10 +6,10 @@ public class Karte {
     private int motivnr;
     private Spielbrett position;
     private int positionX;
-    private int positionY;
+    private int positionY; 
     private int seitenlaenge; //variiert je nach Spielbrett
-    private boolean paarGefunden;
-    private boolean umgedreht;
+    private boolean paarGefunden; //Wahrheitswert, ob ein Paar gefunden wurde oder nicht (wenn auf true gesetzt wird, ist es unveränderlich)
+    private boolean umgedreht; //Wahrheitswert, ob die Karte im Moment umgedreht ist oder nicht
     
     public Karte(int motivnr){
         this.kartenruecken = null;
@@ -17,7 +17,7 @@ public class Karte {
         this.position = position;
         this.positionX = positionX;
         this.positionY = positionY;
-        this.seitenlaenge = 1;
+        this.seitenlaenge = 1; //sollte irgendwann mal gemacht werden lol
         this.paarGefunden = false;
         this.umgedreht = false;
     }

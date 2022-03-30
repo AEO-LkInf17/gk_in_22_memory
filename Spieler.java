@@ -10,17 +10,21 @@ public class Spieler {
         this.zuege = 0;
     }
 
-    public void setPaare() {
-        this.paare++;
+    public void setPaare() { //spielers paare werden hochgezaehlt
+        this.paare++; 
     }
 
-    public void setZuege() {
-        this.zuege ++;
+    public void setZuege() { //relevant fuer die speicherschicht
+        this.zuege ++; 
     }
 
     @Override
-    public String toString() {
+    public String toString() { 
         return "Spieler{" + "paare=" + paare + ", zuege=" + zuege + '}';
+    }
+
+    public int getPaare() {
+        return paare;
     }
     
 }
