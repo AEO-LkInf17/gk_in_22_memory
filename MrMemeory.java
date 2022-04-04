@@ -3,6 +3,7 @@ package de.aeo.memeory;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.io.*;
 
 /////////////////////// Verwaltungsklasse ///////////////////////
 public class MrMemeory { //wenn gui funktioniert, dann wichtig
@@ -65,6 +66,7 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
   {
     
   }*/
+    
     public static void main(String[] args) {
 
         Spieler sp = new Spieler();
@@ -78,6 +80,54 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         s.setPositionsbezeichnung(); //wirft Gitter aus
         s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4));
         s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
+        System.out.println(k0);
+        try {
+            FileOutputStream fileOut = new FileOutputStream("test.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(sp);
+            out.writeObject(s);
+            out.writeObject(sm);
+            out.writeObject(k0);
+            out.writeObject(k1);
+            out.writeObject(k2);
+            out.writeObject(k3);
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized Data is saved in test.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+        
+        Spieler spF;
+        Spielbrett sF;
+        Spielmechanik smF;
+        Karte k0F;
+        Karte k1F;
+        Karte k2F;
+        Karte k3F;
+        
+        try {
+            FileInputStream fileIn = new FileInputStream("test.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            spF = (Spieler) in.readObject();
+            sF = (Spielbrett) in.readObject();
+            smF = (Spielmechanik) in.readObject();
+            k0F = (Karte) in.readObject();
+            k1F = (Karte) in.readObject();
+            k2F = (Karte) in.readObject();
+            k3F = (Karte) in.readObject();
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+            return;
+        } catch (ClassNotFoundException c) {
+            System.out.println("Class not found");
+            c.printStackTrace();
+            return;
+        }
+        
+        System.out.println("gespeichert: " + k0F);
 
         sm.umdrehen(k0, k1);
         sm.umdrehen(k2, k3);

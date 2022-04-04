@@ -1,10 +1,11 @@
 package de.aeo.memeory;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Spielbrett {
+public class Spielbrett implements Serializable {
 
     private int hintergrund; //sollte eig ein bild sein
     private int[][] positionsbezeichnung; //gitter

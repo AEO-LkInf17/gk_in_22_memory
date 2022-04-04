@@ -1,6 +1,8 @@
 package de.aeo.memeory;
 
-public class Spieler {
+import java.io.*;
+
+public class Spieler implements Serializable {
 
     public int paare;
     public int zuege;

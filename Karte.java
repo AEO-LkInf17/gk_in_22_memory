@@ -1,6 +1,8 @@
 package de.aeo.memeory;
 
-public class Karte {
+import java.io.*;
+
+public class Karte implements Serializable {
 
     private String kartenruecken;
     private int motivnr;

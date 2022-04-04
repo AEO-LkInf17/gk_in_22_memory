@@ -1,8 +1,9 @@
 package de.aeo.memeory;
 
 import java.util.ArrayList;
+import java.io.*;
 
-public class Spielmechanik {
+public class Spielmechanik implements Serializable {
 
     private Spieler spieler;
     private int paarAnzahl;
