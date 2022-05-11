@@ -48,11 +48,11 @@ public class OptionenEndlich extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButton1);
-        jToggleButton1.setBounds(40, 340, 130, 23);
+        jToggleButton1.setBounds(40, 340, 130, 22);
         getContentPane().add(jSlider1);
-        jSlider1.setBounds(280, 200, 200, 26);
+        jSlider1.setBounds(280, 200, 200, 20);
         getContentPane().add(jSlider2);
-        jSlider2.setBounds(280, 270, 200, 26);
+        jSlider2.setBounds(280, 270, 200, 20);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Musiklautstärke");

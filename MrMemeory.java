@@ -7,12 +7,30 @@ import java.io.*;
 
 /////////////////////// Verwaltungsklasse ///////////////////////
 public class MrMemeory { //wenn gui funktioniert, dann wichtig
+    private static MrMemeory instance;
 
-    /*public void starteSpiel()
+    public static MrMemeory getInstance() {
+        if (instance == null) {
+            instance = new MrMemeory();
+        }
+        return instance;
+    }
+    public void starteSpiel()
   {
-    
+        Spieler sp = new Spieler();
+        Spielbrett s = new Spielbrett(0, 5, 4);
+        Spielmechanik sm = new Spielmechanik(sp, s);
+        Karte k0 = new Karte(0); //unbedingt for-Schleife und Arraylist zur vereinfachten Erstellung implementieren
+        Karte k1 = new Karte(0);
+        Karte k2 = new Karte(1);
+        Karte k3 = new Karte(1);
+        s.setSpielmechanik(sm);
+        s.setPositionsbezeichnung(); //wirft Gitter aus
+        s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4)); // auch for-Schleife
+        s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
+        System.out.println(k0);
   }
-  public Spielbrett waehleSpielgroesse(Spielbrett sb) //waehlt Spielbrett
+  /*public Spielbrett waehleSpielgroesse(Spielbrett sb) //waehlt Spielbrett
   {
     //uebernimmt Layout eines Spielbretts
       return null;
@@ -69,7 +87,7 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
     
     public static void main(String[] args) {
 
-        Spieler sp = new Spieler();
+        /*Spieler sp = new Spieler();
         Spielbrett s = new Spielbrett(0, 5, 4);
         Spielmechanik sm = new Spielmechanik(sp, s);
         Karte k0 = new Karte(0);
@@ -79,15 +97,16 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         s.setSpielmechanik(sm);
         s.setPositionsbezeichnung(); //wirft Gitter aus
         s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4));
-        s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
-        System.out.println(k0);
-        try {
+        s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));*/
+        
+        //System.out.println(k0);
+        /*try { //Speicherblock - spaeter vielleicht auslagern wie mit GUI
             FileOutputStream fileOut = new FileOutputStream("test.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(sp);
             out.writeObject(s);
             out.writeObject(sm);
-            out.writeObject(k0);
+            out.writeObject(k0); //spaeter mit for-Schleife vereinfacht
             out.writeObject(k1);
             out.writeObject(k2);
             out.writeObject(k3);
@@ -127,18 +146,18 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
             return;
         }
         
-        System.out.println("gespeichert: " + k0F);
+        System.out.println("gespeichert: " + k0F);*/
 
-        sm.umdrehen(k0, k1);
-        sm.umdrehen(k2, k3);
+        //sm.umdrehen(k0, k1);
+        //sm.umdrehen(k2, k3);
         //sm.vergleich(k0, k1);
         //sm.vergleich(k2, k3);
 
-        System.out.println(k0);
+        //System.out.println(k0);
         
-        sm.setSpielbrett(s);
-        sm.setPaarAnzahl();
-        System.out.println(sm.getPaarAnzahl());
+        //sm.setSpielbrett(s);
+        //sm.setPaarAnzahl();
+        //System.out.println(sm.getPaarAnzahl());
         //System.out.println("" + sm.vergleich(k0, k1)); //vergleicht Karten
         //System.out.println(s.wasliegtaufxy(0, 0)); //checkt, welche Karte auf dieser Position liegt
         //System.out.println(sp);

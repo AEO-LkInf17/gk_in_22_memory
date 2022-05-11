@@ -2,13 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package memory_GUI;
+package de.aeo.memeory.memeorybrettAnt.memeory.src.memeory;
+
+import de.aeo.memeory.MrMemeory;
 
 /**
  *
  * @author Sonia
  */
 public class Hauptmenü extends javax.swing.JFrame {
+
+    private MrMemeory schicht2 = MrMemeory.getInstance();
 
     /**
      * Creates new form Hauptmenü
@@ -42,6 +46,11 @@ public class Hauptmenü extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButton1.setText("Start");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(260, 220, 200, 60);
 
@@ -74,6 +83,11 @@ public class Hauptmenü extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        schicht2.starteSpiel();
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -109,6 +123,7 @@ public class Hauptmenü extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
