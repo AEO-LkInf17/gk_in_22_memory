@@ -5,16 +5,19 @@ import java.io.*;
 
 public class Spielmechanik implements Serializable {
 
+    //Attribute//------------------------------------------------------------
     private Spieler spieler;
     private int paarAnzahl;
     private Spielbrett s;
 
+    //Konstruktor//------------------------------------------------------------
     public Spielmechanik(Spieler spieler, Spielbrett s) {
         this.spieler = spieler;
         this.paarAnzahl = paarAnzahl;
         this.s = s;
     }
 
+    //Ausfuehrung//------------------------------------------------------------
     public boolean umdrehen(Karte k, Karte l) { //karten sind umgedreht
         k.setUmgedreht(true);
         l.setUmgedreht(true);
@@ -45,23 +48,25 @@ public class Spielmechanik implements Serializable {
         }
 
     }
-
-    public int setPaarAnzahl() { 
-        paarAnzahl = s.getBreite() * s.getHoehe()/2; //gibt max Paaare auf dem Feld
-        return paarAnzahl;
-    }
-
+     
     public boolean spielEnde(int paarAnzahl) { //leitet Spielende ein
         if (paarAnzahl == spieler.getPaare()) {
         } return true; //weiterer Quellcode nach Implementierung der Speicherschicht
     }
 
-    public int getPaarAnzahl() {
+    //set-Methoden//------------------------------------------------------------
+    public int setPaarAnzahl() { 
+        paarAnzahl = s.getBreite() * s.getHoehe()/2; //gibt max Paaare auf dem Feld
         return paarAnzahl;
     }
 
     public Spielbrett setSpielbrett(Spielbrett spielbrett) {
         return spielbrett = spielbrett;
+    }
+
+    //get-Methoden//------------------------------------------------------------
+    public int getPaarAnzahl() {
+        return paarAnzahl;
     }
 
 }

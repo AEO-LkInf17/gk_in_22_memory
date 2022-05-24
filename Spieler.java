@@ -4,14 +4,17 @@ import java.io.*;
 
 public class Spieler implements Serializable {
 
+    //Attribute//------------------------------------------------------------
     public int paare;
     public int zuege;
 
+    //Konstruktor//------------------------------------------------------------
     public Spieler() {
         this.paare = 0;
         this.zuege = 0;
     }
 
+    //set-Methoden------------------------------------------------------------
     public void setPaare() { //spielers paare werden hochgezaehlt
         this.paare++; 
     }
@@ -20,13 +23,18 @@ public class Spieler implements Serializable {
         this.zuege ++; 
     }
 
+    //get-Methoden//------------------------------------------------------------
+    public int getPaare() {
+        return paare;
+    }
+
+    public int getZuege() {
+        return zuege;
+    }
+    
     @Override
     public String toString() { 
         return "Spieler{" + "paare=" + paare + ", zuege=" + zuege + '}';
-    }
-
-    public int getPaare() {
-        return paare;
     }
     
 }

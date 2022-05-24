@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Karte implements Serializable {
 
+    //Attribute//------------------------------------------------------------
     private String kartenruecken;
     private int motivnr;
     private Spielbrett position;
@@ -13,7 +14,7 @@ public class Karte implements Serializable {
     private boolean paarGefunden; //Wahrheitswert, ob ein Paar gefunden wurde oder nicht (wenn auf true gesetzt wird, ist es unveränderlich)
     private boolean umgedreht; //Wahrheitswert, ob die Karte im Moment umgedreht ist oder nicht
     
-    
+    //Konstruktor//------------------------------------------------------------
     public Karte(int motivnr){
         this.kartenruecken = null;
         this.motivnr = motivnr;
@@ -24,21 +25,14 @@ public class Karte implements Serializable {
         this.paarGefunden = false;
         this.umgedreht = false;
     }
-
+    
+    //set-Methoden//------------------------------------------------------------
     public void setSeitenlaenge(int neueSeitenlaenge) {
         this.seitenlaenge = neueSeitenlaenge;
     }
 
     public void setPosition(Spielbrett position) {
         this.position = position;
-    }
-
-    public String toString() {
-        return positionX + " " + positionY + " " + motivnr;
-    }
-
-    public int getMotivnr() {
-        return motivnr;
     }
 
     public void setPaarGefunden(boolean paarGefunden) {
@@ -52,10 +46,21 @@ public class Karte implements Serializable {
     public void setPositionY(int positionY) {
         this.positionY = positionY;
     }
+
     public void setUmgedreht(boolean umgedreht) {
         this.umgedreht = umgedreht;
     }
+
+    //get-Methoden//------------------------------------------------------------
+    public int getMotivnr() {
+        return motivnr;
+    }
+
     public boolean getUmgedreht() {
         return umgedreht;
+    }
+    
+    public String toString() {
+        return positionX + " " + positionY + " " + motivnr;
     }
 }
