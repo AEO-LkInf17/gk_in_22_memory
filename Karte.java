@@ -13,6 +13,7 @@ public class Karte implements Serializable {
     private boolean paarGefunden; //Wahrheitswert, ob ein Paar gefunden wurde oder nicht (wenn auf true gesetzt wird, ist es unveränderlich)
     private boolean umgedreht; //Wahrheitswert, ob die Karte im Moment umgedreht ist oder nicht
     
+    
     public Karte(int motivnr){
         this.kartenruecken = null;
         this.motivnr = motivnr;
@@ -56,5 +57,5 @@ public class Karte implements Serializable {
     }
     public boolean getUmgedreht() {
         return umgedreht;
-    } 
+    }
 }

@@ -14,6 +14,7 @@ public class Spielbrett implements Serializable {
     private Spielmechanik spielmechanik; 
     private int breite; //breite des gitters
     private int hoehe; //hoehe des spielbretts
+    //private ArrayList<Karte> kartenliste = new ArrayList<>();
 
     public Spielbrett(int hintergrund, int breite, int hoehe) {
         this.hintergrund = hintergrund;
@@ -84,4 +85,7 @@ public class Spielbrett implements Serializable {
         return hoehe;
     }
 
+    /*public void fuegeKarteZuListeHinzu(Karte k) {
+        kartenliste.add(k);
+    }*/
 }

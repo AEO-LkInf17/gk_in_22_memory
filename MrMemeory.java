@@ -8,6 +8,7 @@ import java.io.*;
 /////////////////////// Verwaltungsklasse ///////////////////////
 public class MrMemeory { //wenn gui funktioniert, dann wichtig
     private static MrMemeory instance;
+    private ArrayList<Karte> kartenliste = new ArrayList<>(); //fuer das kartenspeichern, wahrscheinlich unnoetig
 
     public static MrMemeory getInstance() {
         if (instance == null) {
@@ -15,8 +16,13 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         }
         return instance;
     }
+    
+    /*public void fuegeKarteHinzu(Karte k) {
+        kartenliste.add(k); 
+    }*/
+    
     public void starteSpiel()
-  {
+    {
         Spieler sp = new Spieler();
         Spielbrett s = new Spielbrett(0, 5, 4);
         Spielmechanik sm = new Spielmechanik(sp, s);
@@ -28,6 +34,25 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         s.setPositionsbezeichnung(); //wirft Gitter aus
         s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4)); // auch for-Schleife
         s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
+        for (Karte k : this.kartenliste) { //alle karten werden komplett gespeichert, nicht nur die position
+            kartenliste.add(k);
+        }
+        
+        try { //Speicherblock - spaeter vielleicht auslagern wie mit GUI
+            FileOutputStream fileOut = new FileOutputStream("test.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(sp);
+            out.writeObject(s);
+            out.writeObject(sm);
+            for (Karte k : this.kartenliste) { //for-schleife fuer karten-speichern eingefuegt
+                out.writeObject(k);
+            }
+            out.close();
+            fileOut.close();
+            System.out.println("Serialized Data is saved in Spielstand.ser"); //mit fortfahren diese datei aufrufen, spielstand beim verlassen eines spiels soll aktualisiert werden
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
         System.out.println(k0);
   }
   /*public Spielbrett waehleSpielgroesse(Spielbrett sb) //waehlt Spielbrett
@@ -76,10 +101,6 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
   {
     
   }
-  public void fensterSchliessen()
-  {
-    
-  }
   public void oeffnePause()
   {
     
@@ -106,10 +127,9 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
             out.writeObject(sp);
             out.writeObject(s);
             out.writeObject(sm);
-            out.writeObject(k0); //spaeter mit for-Schleife vereinfacht
-            out.writeObject(k1);
-            out.writeObject(k2);
-            out.writeObject(k3);
+            for (karte k : this.kartenliste) {
+                out.writeObject(k);
+            }
             out.close();
             fileOut.close();
             System.out.println("Serialized Data is saved in test.ser");
