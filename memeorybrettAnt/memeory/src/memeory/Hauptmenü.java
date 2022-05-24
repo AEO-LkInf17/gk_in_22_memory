@@ -30,11 +30,11 @@ public class Hauptmenü extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        starteSpiel = new javax.swing.JButton();
+        FortfahreSpiel = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        BeendeProgramm = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -45,18 +45,18 @@ public class Hauptmenü extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(770, 650));
         getContentPane().setLayout(null);
 
-        jButton1.setText("Start");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        starteSpiel.setText("Start");
+        starteSpiel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                starteSpielMouseClicked(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(260, 220, 200, 60);
+        getContentPane().add(starteSpiel);
+        starteSpiel.setBounds(260, 220, 200, 60);
 
-        jButton2.setText("Fortfahren");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(280, 290, 150, 50);
+        FortfahreSpiel.setText("Fortfahren");
+        getContentPane().add(FortfahreSpiel);
+        FortfahreSpiel.setBounds(280, 290, 150, 50);
 
         jButton3.setText("Statistiken");
         getContentPane().add(jButton3);
@@ -66,9 +66,14 @@ public class Hauptmenü extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(280, 350, 150, 50);
 
-        jButton5.setText("Beenden");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(280, 470, 150, 50);
+        BeendeProgramm.setText("Beenden");
+        BeendeProgramm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BeendeProgrammMouseClicked(evt);
+            }
+        });
+        getContentPane().add(BeendeProgramm);
+        BeendeProgramm.setBounds(280, 470, 150, 50);
 
         jButton6.setText("Trigger");
         getContentPane().add(jButton6);
@@ -84,10 +89,15 @@ public class Hauptmenü extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void starteSpielMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starteSpielMouseClicked
         // TODO add your handling code here:
-        schicht2.starteSpiel();
-    }//GEN-LAST:event_jButton1MouseClicked
+        schicht2.starteSpiel(); //name vom button geaendert
+    }//GEN-LAST:event_starteSpielMouseClicked
+
+    private void BeendeProgrammMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BeendeProgrammMouseClicked
+        // TODO add your handling code here:
+        System.exit(0); //name vom button geandert, dass programm wird beendet wenn man auf dem button drückt
+    }//GEN-LAST:event_BeendeProgrammMouseClicked
 
     /**
      * @param args the command line arguments
@@ -126,12 +136,12 @@ public class Hauptmenü extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BeendeProgramm;
+    private javax.swing.JButton FortfahreSpiel;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton starteSpiel;
     // End of variables declaration//GEN-END:variables
 }
