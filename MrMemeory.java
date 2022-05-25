@@ -38,6 +38,10 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
         
   }
+
+    public void umdrehen() {
+        
+    }
   /*public Spielbrett waehleSpielgroesse(Spielbrett sb) //waehlt Spielbrett
   {
     //uebernimmt Layout eines Spielbretts
@@ -48,7 +52,7 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
   {}*/
   public void spielSpeichern()
   {
-    for (Karte k : this.kartenliste) { //alle karten werden komplett gespeichert, nicht nur die position
+    /*for (Karte k : this.kartenliste) { //alle karten werden komplett gespeichert, nicht nur die position
             kartenliste.add(k);
         }
         
@@ -67,7 +71,7 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         } catch (IOException i) {
             i.printStackTrace();
         }
-        System.out.println(k0);
+        System.out.println(k0);*/
   }
     
     public static void main(String[] args) {

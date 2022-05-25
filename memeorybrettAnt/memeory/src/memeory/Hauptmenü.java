@@ -46,9 +46,9 @@ public class Hauptmenü extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         starteSpiel.setText("Start");
-        starteSpiel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                starteSpielMouseClicked(evt);
+        starteSpiel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                starteSpielActionPerformed(evt);
             }
         });
         getContentPane().add(starteSpiel);
@@ -63,13 +63,18 @@ public class Hauptmenü extends javax.swing.JFrame {
         jButton3.setBounds(280, 410, 150, 50);
 
         jButton4.setText("Optionen");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4);
         jButton4.setBounds(280, 350, 150, 50);
 
         BeendeProgramm.setText("Beenden");
-        BeendeProgramm.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BeendeProgrammMouseClicked(evt);
+        BeendeProgramm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BeendeProgrammActionPerformed(evt);
             }
         });
         getContentPane().add(BeendeProgramm);
@@ -89,15 +94,26 @@ public class Hauptmenü extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void starteSpielMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_starteSpielMouseClicked
+    private void starteSpielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starteSpielActionPerformed
         // TODO add your handling code here:
-        schicht2.starteSpiel(); //name vom button geaendert
-    }//GEN-LAST:event_starteSpielMouseClicked
+        schicht2.starteSpiel();
+        memoryBrett mb = new memoryBrett();
+        mb.setVisible(true);
+        this.dispose();
 
-    private void BeendeProgrammMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BeendeProgrammMouseClicked
+    }//GEN-LAST:event_starteSpielActionPerformed
+
+    private void BeendeProgrammActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeendeProgrammActionPerformed
         // TODO add your handling code here:
-        System.exit(0); //name vom button geandert, dass programm wird beendet wenn man auf dem button drückt
-    }//GEN-LAST:event_BeendeProgrammMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_BeendeProgrammActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        OptionenEndlich ob = new OptionenEndlich();
+        ob.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -2,13 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package memory_GUI;
+package de.aeo.memeory.memeorybrettAnt.memeory.src.memeory;
+
+import de.aeo.memeory.Spielmechanik;
 
 /**
  *
  * @author Sonia
  */
 public class memoryBrett extends javax.swing.JFrame {
+    private Spielmechanik spieeelmechanik = Spielmechanik.getInstance();
 
     /**
      * Creates new form memoryBrett

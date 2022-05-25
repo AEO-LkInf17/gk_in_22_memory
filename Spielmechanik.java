@@ -5,10 +5,19 @@ import java.io.*;
 
 public class Spielmechanik implements Serializable {
 
+    private static Spielmechanik instance;
+
+    public static Spielmechanik getInstance() {
+        if (instance == null) {
+            instance = new Spielmechanik(spieler, s);
+        }
+        return instance;
+    }
+
     //Attribute//------------------------------------------------------------
-    private Spieler spieler;
+    private static Spieler spieler;
     private int paarAnzahl;
-    private Spielbrett s;
+    private static Spielbrett s;
 
     //Konstruktor//------------------------------------------------------------
     public Spielmechanik(Spieler spieler, Spielbrett s) {
@@ -22,7 +31,7 @@ public class Spielmechanik implements Serializable {
         k.setUmgedreht(true);
         l.setUmgedreht(true);
         vergleich(k, l); //setzt nur ein, wenn max 2 karten umgedreht (true) sind
-        return true; 
+        return true;
     }
 
     public boolean vergleich(Karte k, Karte l) {
@@ -48,15 +57,16 @@ public class Spielmechanik implements Serializable {
         }
 
     }
-     
+
     public boolean spielEnde(int paarAnzahl) { //leitet Spielende ein
         if (paarAnzahl == spieler.getPaare()) {
-        } return true; //weiterer Quellcode nach Implementierung der Speicherschicht
+        }
+        return true; //weiterer Quellcode nach Implementierung der Speicherschicht
     }
 
     //set-Methoden//------------------------------------------------------------
-    public int setPaarAnzahl() { 
-        paarAnzahl = s.getBreite() * s.getHoehe()/2; //gibt max Paaare auf dem Feld
+    public int setPaarAnzahl() {
+        paarAnzahl = s.getBreite() * s.getHoehe() / 2; //gibt max Paaare auf dem Feld
         return paarAnzahl;
     }
 
