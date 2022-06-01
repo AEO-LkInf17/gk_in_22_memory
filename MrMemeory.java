@@ -20,7 +20,7 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
     }
     
     /*public void fuegeKarteHinzu(Karte k) {
-        kartenliste.add(k); 
+        kartenliste.add(k);
     }*/
     //Ausfuehrung//------------------------------------------------------------
     public void starteSpiel()
@@ -28,14 +28,28 @@ public class MrMemeory { //wenn gui funktioniert, dann wichtig
         Spieler sp = new Spieler();
         Spielbrett s = new Spielbrett(0, 5, 4);
         Spielmechanik sm = new Spielmechanik(sp, s);
-        Karte k0 = new Karte(0); //unbedingt for-Schleife und Arraylist zur vereinfachten Erstellung implementieren
-        Karte k1 = new Karte(0);
-        Karte k2 = new Karte(1);
-        Karte k3 = new Karte(1);
+        for (int i=0 ; i<10 ; i++) {
+            Karte k = new Karte(i);
+            kartenliste.add(k);
+            //System.out.println(k);
+        }
+        for (int i=0 ; i<10 ; i++) {
+            Karte k = new Karte(i);
+            kartenliste.add(k);
+            //System.out.println(k);
+        }
+        
+         System.out.println(kartenliste);   
+        
+        
+        //Karte k0 = new Karte(0); //unbedingt for-Schleife und Arraylist zur vereinfachten Erstellung implementieren
+        //Karte k1 = new Karte(0);
+        //Karte k2 = new Karte(1);
+        //Karte k3 = new Karte(1);
         s.setSpielmechanik(sm);
         s.erstelleGitter(); //wirft Gitter aus
-        s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4)); // auch for-Schleife
-        s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
+        //s.legeKartehin(k0, s.setZufallx(1, 5), s.setZufally(1, 4)); // auch for-Schleife
+        //s.legeKartehin(k1, s.setZufallx(1, 5), s.setZufally(1, 4));
         
   }
 
