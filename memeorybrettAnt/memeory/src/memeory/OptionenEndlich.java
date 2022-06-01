@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
 
 /**
  *
@@ -32,6 +32,7 @@ public class OptionenEndlich extends javax.swing.JFrame {
         jSlider2 = new javax.swing.JSlider();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,11 +65,22 @@ public class OptionenEndlich extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(170, 270, 100, 15);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memeory/Motive/Optionsmenü.jpg"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\oof.jpg")); // NOI18N
+        jButton1.setActionCommand("");
+        jButton1.setLabel("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(10, 10, 50, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\Optionsmenü.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(500, 500));
+        jLabel1.setMaximumSize(new java.awt.Dimension(520, 520));
         jLabel1.setMinimumSize(new java.awt.Dimension(500, 500));
-        jLabel1.setPreferredSize(new java.awt.Dimension(500, 500));
+        jLabel1.setPreferredSize(new java.awt.Dimension(520, 520));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -20, 510, 530);
 
@@ -78,6 +90,10 @@ public class OptionenEndlich extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,6 +131,7 @@ public class OptionenEndlich extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

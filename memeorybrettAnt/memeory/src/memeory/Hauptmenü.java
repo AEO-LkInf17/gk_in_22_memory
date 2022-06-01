@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package de.aeo.memeory.memeorybrettAnt.memeory.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
 
 import de.aeo.memeory.MrMemeory;
 
@@ -110,9 +110,9 @@ public class Hauptmenü extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        OptionenEndlich ob = new OptionenEndlich();
-        ob.setVisible(true);
-        this.dispose();
+        //OptionenEndlich ob = new OptionenEndlich();
+        //ob.setVisible(true);
+        //this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

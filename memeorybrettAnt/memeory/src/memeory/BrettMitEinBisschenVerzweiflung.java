@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package memory_GUI;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
 
 /**
  *
@@ -49,12 +49,12 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(770, 650));
-        setMinimumSize(new java.awt.Dimension(770, 650));
-        setPreferredSize(new java.awt.Dimension(770, 650));
-        setSize(new java.awt.Dimension(770, 650));
+        setMinimumSize(new java.awt.Dimension(750, 630));
+        setPreferredSize(new java.awt.Dimension(767, 637));
+        setSize(new java.awt.Dimension(767, 637));
         getContentPane().setLayout(null);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("B1");
         jButton2.setActionCommand("6");
         jButton2.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton2.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -67,7 +67,8 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(0, 150, 150, 150);
 
-        jButton3.setText("jButton2");
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\The Creator Of Pepe The Frog Has Killed The Character.png")); // NOI18N
+        jButton3.setText("A1");
         jButton3.setActionCommand("1");
         jButton3.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton3.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -80,7 +81,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(0, 0, 150, 150);
 
-        jButton4.setText("jButton2");
+        jButton4.setText("A2");
         jButton4.setActionCommand("2");
         jButton4.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton4.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -93,7 +94,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(150, 0, 150, 150);
 
-        jButton5.setText("jButton2");
+        jButton5.setText("A3");
         jButton5.setActionCommand("3");
         jButton5.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton5.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -106,7 +107,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(300, 0, 150, 150);
 
-        jButton6.setText("jButton2");
+        jButton6.setText("A4");
         jButton6.setActionCommand("4");
         jButton6.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton6.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -119,7 +120,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton6);
         jButton6.setBounds(450, 0, 150, 150);
 
-        jButton7.setText("jButton2");
+        jButton7.setText("B2");
         jButton7.setActionCommand("7");
         jButton7.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton7.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -132,7 +133,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton7);
         jButton7.setBounds(150, 150, 150, 150);
 
-        jButton8.setText("jButton2");
+        jButton8.setText("B3");
         jButton8.setActionCommand("8");
         jButton8.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton8.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -145,7 +146,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton8);
         jButton8.setBounds(300, 150, 150, 150);
 
-        jButton9.setText("jButton2");
+        jButton9.setText("B4");
         jButton9.setActionCommand("9");
         jButton9.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton9.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -158,7 +159,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton9);
         jButton9.setBounds(450, 150, 150, 150);
 
-        jButton10.setText("jButton2");
+        jButton10.setText("B5");
         jButton10.setActionCommand("10");
         jButton10.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton10.setMinimumSize(new java.awt.Dimension(150, 150));
@@ -210,7 +211,7 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton13);
         jButton13.setBounds(300, 300, 150, 150);
 
-        jButton14.setText("jButton2");
+        jButton14.setText("A5");
         jButton14.setActionCommand("5");
         jButton14.setMaximumSize(new java.awt.Dimension(150, 150));
         jButton14.setMinimumSize(new java.awt.Dimension(150, 150));

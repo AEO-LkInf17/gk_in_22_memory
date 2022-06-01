@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package memory_GUI;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
 
 /**
  *
@@ -30,7 +30,6 @@ public class Pausenmenü extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,15 +65,10 @@ public class Pausenmenü extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(210, 310, 120, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memeory/Motive/oof.jpg"))); // NOI18N
-        jLabel2.setText("Zurück");
-        jLabel2.setMaximumSize(new java.awt.Dimension(20, 50));
-        jLabel2.setPreferredSize(new java.awt.Dimension(20, 50));
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(390, 430, 50, 50);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/memeory/Motive/pause jpg.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\pause jpg.jpg")); // NOI18N
+        jLabel1.setLabelFor(this);
+        jLabel1.setText("Hintergrund");
+        jLabel1.setToolTipText("");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -150, 800, 800);
 
@@ -130,6 +124,5 @@ public class Pausenmenü extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
