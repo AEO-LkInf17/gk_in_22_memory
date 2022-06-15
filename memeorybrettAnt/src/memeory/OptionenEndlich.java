@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package de.aeo.memeory.memeorybrettAnt.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.src.memeory;
 
 /**
  *

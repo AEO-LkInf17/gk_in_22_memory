@@ -2,14 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package de.aeo.memeory.memeorybrettAnt.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.src.memeory;
+
+import de.aeo.memeory.gk_in_22_memory.git.trunk.Karte;
 
 /**
  *
  * @author Sonia
  */
 public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
-
+    private Karte offene;
     /**
      * Creates new form BrettMitEinBisschenVerzweiflung
      */

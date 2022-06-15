@@ -1,4 +1,4 @@
-package de.aeo.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk;
 
 import java.io.*;
 import java.util.ArrayList;

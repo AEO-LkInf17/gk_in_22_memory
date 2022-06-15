@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.src.memeory;
 
 /**
  *
@@ -65,7 +65,6 @@ public class Pausenmenü extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(210, 310, 120, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\pause jpg.jpg")); // NOI18N
         jLabel1.setLabelFor(this);
         jLabel1.setText("Hintergrund");
         jLabel1.setToolTipText("");
