@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
+package de.aeo.memeory.memeorybrettAnt.src.memeory;
 
 /**
  *
@@ -67,7 +67,6 @@ public class BrettMitEinBisschenVerzweiflung extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(0, 150, 150, 150);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\The Creator Of Pepe The Frog Has Killed The Character.png")); // NOI18N
         jButton3.setText("A1");
         jButton3.setActionCommand("1");
         jButton3.setMaximumSize(new java.awt.Dimension(150, 150));

@@ -91,13 +91,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\schueler\Documents\NetBeansProjects\Memeory\src\main\java\de\aeo\memeory\gk_in_22_memory.git\trunk\memeorybrettAnt\memeory\src\memeory\Motive\oof.jpg"/>
-        </Property>
-        <Property name="actionCommand" type="java.lang.String" value=""/>
-        <Property name="label" type="java.lang.String" value=""/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
@@ -109,9 +102,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\schueler\Documents\NetBeansProjects\Memeory\src\main\java\de\aeo\memeory\gk_in_22_memory.git\trunk\memeorybrettAnt\memeory\src\memeory\Motive\Optionsmen&#xfc;.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[520, 520]"/>
