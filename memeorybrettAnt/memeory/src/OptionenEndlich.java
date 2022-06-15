@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src;
 
 /**
  *
@@ -65,9 +65,6 @@ public class OptionenEndlich extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(170, 270, 100, 15);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\oof.jpg")); // NOI18N
-        jButton1.setActionCommand("");
-        jButton1.setLabel("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -76,7 +73,6 @@ public class OptionenEndlich extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(10, 10, 50, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\schueler\\Documents\\NetBeansProjects\\Memeory\\src\\main\\java\\de\\aeo\\memeory\\gk_in_22_memory.git\\trunk\\memeorybrettAnt\\memeory\\src\\memeory\\Motive\\Optionsmenü.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setMaximumSize(new java.awt.Dimension(520, 520));
         jLabel1.setMinimumSize(new java.awt.Dimension(500, 500));

@@ -62,9 +62,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\schueler\Documents\NetBeansProjects\Memeory\src\main\java\de\aeo\memeory\gk_in_22_memory.git\trunk\memeorybrettAnt\memeory\src\memeory\Motive\The Creator Of Pepe The Frog Has Killed The Character.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="A1"/>
         <Property name="actionCommand" type="java.lang.String" value="1"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

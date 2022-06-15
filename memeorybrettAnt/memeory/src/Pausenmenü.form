@@ -85,9 +85,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\schueler\Documents\NetBeansProjects\Memeory\src\main\java\de\aeo\memeory\gk_in_22_memory.git\trunk\memeorybrettAnt\memeory\src\memeory\Motive\pause jpg.jpg"/>
-        </Property>
         <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="Form"/>
         </Property>

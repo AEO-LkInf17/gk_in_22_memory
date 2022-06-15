@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src.memeory;
+package de.aeo.memeory.gk_in_22_memory.git.trunk.memeorybrettAnt.memeory.src;
 
-import de.aeo.memeory.MrMemeory;
+import de.aeo.memeory.gk_in_22_memory.git.trunk.MrMemeory;
 
 /**
  *
@@ -97,7 +97,7 @@ public class Hauptmenü extends javax.swing.JFrame {
     private void starteSpielActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starteSpielActionPerformed
         // TODO add your handling code here:
         schicht2.starteSpiel();
-        memoryBrett mb = new memoryBrett();
+        BrettMitEinBisschenVerzweiflung mb = new BrettMitEinBisschenVerzweiflung();
         mb.setVisible(true);
         this.dispose();
 
